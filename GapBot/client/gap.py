@@ -42,6 +42,5 @@ class Gap(Methods, BaseClient):
         @self.flask_app.route(self.callback, methods=['POST'])
         def webhook():
             self.handler(self, dict(request.form))
-            print(request.form)
             return dumps(request.form)
         self.flask_app.run(host=self.host, port=self.port, debug=False)
