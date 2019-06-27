@@ -1,7 +1,8 @@
-from flask import request
+from flask import request, jsonify
 from json import dumps
 from .base_client import BaseClient
 from .methods import Methods
+from .. import __version__
 
 
 class Gap(Methods, BaseClient):
@@ -39,6 +40,14 @@ class Gap(Methods, BaseClient):
         self.handler = None
 
     def run(self):
+        @self.flask_app.route('/info', methods=['POST', 'GET', 'PUT'])
+        def gapbot_info():
+            result = {
+                'Module': 'GapBot',
+                'APP_VERSION': __version__,
+            }
+            return jsonify(result)
+
         @self.flask_app.route(self.callback, methods=['POST'])
         def webhook():
             self.handler(self, dict(request.form))
