@@ -1,8 +1,8 @@
 from flask import request, jsonify
 from json import dumps
-from GapBot.ext import BaseClient
 from .methods import Methods
 from GapBot import __version__
+from GapBot.ext import BaseClient
 
 
 class Gap(Methods, BaseClient):
@@ -53,3 +53,9 @@ class Gap(Methods, BaseClient):
             self.handler(self, dict(request.form))
             return dumps(request.form)
         self.flask_app.run(host=self.host, port=self.port, debug=False)
+
+    def _send(self, method, data, files=None):
+        headers = {
+            'token': self.bot_token
+        }
+        return self.session.post(f'{self.BASE_URL}/{method}', data=data, files=files, headers=headers)
