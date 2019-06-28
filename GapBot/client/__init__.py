@@ -1,4 +1,5 @@
-from .gap import Gap, BaseClient
+from .gap import Gap
+from GapBot.ext import BaseClient
 from .methods import *
 
 __all__ = [

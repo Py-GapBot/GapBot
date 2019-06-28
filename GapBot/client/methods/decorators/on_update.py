@@ -1,4 +1,4 @@
-from ...base_client import BaseClient
+from GapBot.ext import BaseClient
 
 
 class OnUpdate(BaseClient):

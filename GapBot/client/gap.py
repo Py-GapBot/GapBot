@@ -1,6 +1,6 @@
 from flask import request, jsonify
 from json import dumps
-from .base_client import BaseClient
+from GapBot.ext import BaseClient
 from .methods import Methods
 from .. import __version__
 
