@@ -2,7 +2,7 @@ from flask import request, jsonify
 from json import dumps
 from GapBot.ext import BaseClient
 from .methods import Methods
-from .. import __version__
+from GapBot import __version__
 
 
 class Gap(Methods, BaseClient):
