@@ -7,7 +7,7 @@ with open("README.md", encoding="utf-8") as f:
     readme = f.read()
 
 setup(
-    name="GapBot",
+    name="gapbot",
     version='0.0.3',
     description="GapBot is python Gap messenger's api bot library",
     long_description=readme,
@@ -37,4 +37,5 @@ setup(
         "Topic :: Software Development :: Libraries :: Python Modules",
         'License :: OSI Approved :: GNU Lesser General Public License v3 (LGPLv3)',
     ],
+    zip_safe=False
 )
