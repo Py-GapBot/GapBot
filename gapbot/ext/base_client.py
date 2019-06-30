@@ -1,11 +1,11 @@
-from GapBot import __version__
+from gapbot import __version__
 from flask import Flask
 from re import compile
 from requests import sessions
 
 
 class BaseClient:
-    APP_VERSION = "GapBot {}".format(__version__)
+    APP_VERSION = "gapbot {}".format(__version__)
     BOT_TOKEN_RE = compile(r"^[A-Za-z0-9]{64}$")
     CALLBACK_RE = compile(r"^(http|https)?$")
     flask_app = Flask(__name__)

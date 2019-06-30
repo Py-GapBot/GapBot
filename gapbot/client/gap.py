@@ -1,12 +1,12 @@
 from flask import request, jsonify
 from json import dumps
 from .methods import Methods
-from GapBot import __version__
-from GapBot.ext import BaseClient
+from gapbot import __version__
+from gapbot.ext import BaseClient
 
 
 class Gap(Methods, BaseClient):
-    """GapBot, the main means for interacting with Gap Messenger Bot.
+    """gapbot, the main means for interacting with Gap Messenger Bot.
 
     :param host (``str``, *optional*):
         The hostname to listen on. Defaults to ``'0.0.0.0'``  to have the server available externally as well.
@@ -43,7 +43,7 @@ class Gap(Methods, BaseClient):
         @self.flask_app.route('/info', methods=['POST', 'GET', 'PUT'])
         def gapbot_info():
             result = {
-                'Module': 'GapBot',
+                'Module': 'gapbot',
                 'APP_VERSION': __version__,
             }
             return jsonify(result)

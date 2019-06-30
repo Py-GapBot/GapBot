@@ -1,4 +1,4 @@
-from GapBot import Gap
+from gapbot import Gap
 
 app = Gap(
     bot_token='6327819b0a5a3401bd11f616b9f5d2754e24162610b2a39f94fd299485ff3175'

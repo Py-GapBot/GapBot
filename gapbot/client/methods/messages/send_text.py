@@ -1,4 +1,4 @@
-from GapBot.ext import BaseClient
+from gapbot.ext import BaseClient
 from json import dumps
 
 
