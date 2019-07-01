@@ -9,8 +9,8 @@ if __name__ == '__main__':  # If you are running this module as the main program
     reply_keyboard = {
         "keyboard": [
             [
-                {"row1-btn1":"خط اول-دکمه اول"},
-                {"row1-btn2":"خط اول-دکمه دوم"}
+                {"row1-btn1": "خط اول-دکمه اول"},
+                {"row1-btn2": "خط اول-دکمه دوم"}
             ],
             [
                 {"row2-btn1": "خط دوم-دکمه اول"}
@@ -23,11 +23,12 @@ if __name__ == '__main__':  # If you are running this module as the main program
     }
     inline_keyboard = [
         [
-            {"text":"معمولی","cb_data":"normal"},
+            {"text": "معمولی", "cb_data": "normal"},
         ],
         [
-            {"text":"وب سایت","url":"http://google.com","open_in":"webview_with_header"},
-            {"text":"دونیت","amount":2000,"currency":"IRR","ref_id":"XXXXXXX","desc":"توضیحات مربوط به پرداخت برای نمایش در لیست تراکنش ها"}
+            {"text": "وب سایت", "url": "http://google.com", "open_in": "webview_with_header"},
+            {"text": "دونیت", "amount": 2000, "currency": "IRR", "ref_id": "XXXXXXX",
+             "desc": "توضیحات مربوط به پرداخت برای نمایش در لیست تراکنش ها"}
         ]
     ]
     form = [
