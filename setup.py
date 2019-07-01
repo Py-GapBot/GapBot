@@ -1,21 +1,35 @@
 from setuptools import setup, find_packages
+from os import path
 
-with open("requirements.txt", encoding="utf-8") as r:
-    requires = [i.strip() for i in r]
-
-with open("README.md", encoding="utf-8") as f:
-    readme = f.read()
-
+here = path.abspath(path.dirname(__file__))
+NAME = 'GapBot'
+DESCRIPTION = "gapbot is python Gap messenger's api bot library"
+URL = 'https://github.com/MrMahdi313/gapbot'
+EMAIL = 'm.m.z.m12363@gmail.com'
+AUTHOR = 'MrMahdi313'
+REQUIRES_PYTHON = '>=3.6.0'
+VERSION = '0.0.4'
+LICENSE = 'GNU Lesser General Public License v3.0'
+try:
+    with open(path.join(here, "requirements.txt"), encoding="utf-8") as r:
+        REQUIRED = [i.strip() for i in r]
+except FileNotFoundError:
+    REQUIRED = ['Flask==1.0.3', 'requests==2.22.0',]
+try:
+    with open(path.join(here, "README.md"), encoding="utf-8") as f:
+        README = f.read()
+except FileNotFoundError:
+    README = 'https://github.com/MrMahdi313/GapBot/blob/master/README.md'
 setup(
-    name="gapbot",
-    version='0.0.3',
-    description="gapbot is python Gap messenger's api bot library",
-    long_description=readme,
+    name=NAME,
+    version=VERSION,
+    description=DESCRIPTION,
+    long_description=README,
     long_description_content_type="text/markdown",
-    license='GNU Lesser General Public License v3.0',
-    author='MrMahdi313',
-    author_email='m.m.z.m12363@gmail.com',
-    url='https://github.com/MrMahdi313/gapbot',
+    license=LICENSE,
+    author=AUTHOR,
+    author_email=EMAIL,
+    url=URL,
     project_urls={
         "Tracker": "https://github.com/MrMahdi313/gapbot/issues",
         "API Docs Reference": "https://developer.gap.im/doc",
@@ -24,8 +38,8 @@ setup(
         "Documentation": "https://gapbot.readthedocs.io/en/latest",
     },
     keywords='gap bot api',
-    python_requires='>=3.6',
-    install_requires=requires,
+    python_requires=REQUIRES_PYTHON,
+    install_requires=REQUIRED,
     packages=find_packages(include=['gapbot*']),
     classifiers=[
         "Programming Language :: Python :: 3",

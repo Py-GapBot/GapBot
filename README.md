@@ -6,7 +6,7 @@
     <b>Gap Messenger Api Bot Library for Python</b>
     <br>
     <a href="https://gapbot.readthedocs.io/en/latest/">
-        Documentation
+        Documentation(coming soon)
     </a>
     •
     <a href="https://github.com/MrMahdi313/GapBot/releases">
@@ -18,11 +18,9 @@
 ## GapBot
 
 ``` python
-from GapBot import Gap
+from gapbot import Gap
 
-app = Gap(
-    bot_token='your bot token'
-)
+app = Gap()
 
 
 @app.on_update
@@ -59,10 +57,11 @@ pip3 install GapBot
 
 ### Resources
 
-- The Docs contain lots of resources to help you getting started with GapBot: https://gapbot.readthedocs.io/en/latest .
+- The Docs contain lots of resources to help you getting started with GapBot:
+ https://gapbot.readthedocs.io/en/latest (coming soon).
 - Reading [Examples in this repository](https://github.com/MrMahdi313/GapBot/tree/master/examples) is also a good way
   for learning how GapBot works.
-- For other requests you can send an [Email](mailto:m.m.z.m12363@gmail.com) or a [Message](https://t.me/MrMahdi313).
+- For other requests you can send an [Email](mailto:m.m.z.m12363@gmail.com) or a [Message](https://t.me/Mr_Mahdi313).
 
 ### Contributing
 
