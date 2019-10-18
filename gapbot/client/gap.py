@@ -1,5 +1,5 @@
 from flask import request, jsonify
-from json import dumps
+from json import dumps as json_dumps, loads as json_loads
 from .methods import Methods
 from gapbot import __version__
 from gapbot.ext import BaseClient
@@ -50,8 +50,23 @@ class Gap(Methods, BaseClient):
 
         @self.flask_app.route(self.callback, methods=['POST'])
         def webhook():
-            self.handler(self, dict(request.form))
-            return dumps(request.form)
+            update = dict(request.form)
+            json_update = {
+                'chat_id': update.get('chat_id'),
+                'type': update.get('type'),
+            }
+            if update.get('from'):
+                try:
+                    json_update['from'] = json_loads(update.get('from'))
+                except:
+                    json_update['from'] = update.get('from')
+            if update.get('data'):
+                try:
+                    json_update['data'] = json_loads(update.get('data'))
+                except:
+                    json_update['data'] = update.get('data')
+            self.handler(self, json_update)
+            return json_dumps(json_update)
         self.flask_app.run(host=self.host, port=self.port, debug=False)
 
     def _send(self, method, data, files=None):
