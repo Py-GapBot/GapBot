@@ -5,7 +5,8 @@ from .send_video import SendVideo
 from .send_voice import SendVoice
 from .send_file import SendFile
 from .send_contact import SendContact
+from .send_action import SendAction
 
 
-class Messages(SendText, SendImage, SendAudio, SendVideo, SendVoice, SendFile, SendContact):
+class Messages(SendText, SendImage, SendAudio, SendVideo, SendVoice, SendFile, SendContact, SendAction):
     pass
