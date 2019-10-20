@@ -7,7 +7,19 @@ from .send_file import SendFile
 from .send_contact import SendContact
 from .send_action import SendAction
 from .edit_message import EditMessage
+from .delete_message import DeleteMessage
 
 
-class Messages(SendText, SendImage, SendAudio, SendVideo, SendVoice, SendFile, SendContact, SendAction, EditMessage):
+class Messages(
+    SendText,
+    SendImage,
+    SendAudio,
+    SendVideo,
+    SendVoice,
+    SendFile,
+    SendContact,
+    SendAction,
+    EditMessage,
+    DeleteMessage
+):
     pass
