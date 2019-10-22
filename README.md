@@ -25,7 +25,7 @@ app = Gap()
 
 @app.on_update
 def _update_handler(bot, update):
-    prin('{}'.format(update))
+    print(f'{update}')
 
 
 if __name__ == '__main__':
@@ -35,9 +35,9 @@ if __name__ == '__main__':
 **GapBot** is an elegant, easy-to-use [Gap](https://gap.im/) Bot library written from the
 ground up in Python. It enables you to easily create custom apps.
 
-> [GapBot in fully-asynchronous mode is commin soon »](https://github.com/MrMahdi313/GapBot/tree/async)
+> [GapBot in fully-asynchronous mode is coming soon »](https://github.com/MrMahdi313/GapBot/tree/async)
 >
-> [GapBot in plugin base mode is commin soon »](https://github.com/MrMahdi313/GapBot)
+> [GapBot in plugin base mode is coming soon »](https://github.com/MrMahdi313/GapBot)
 
 ### Features
 
