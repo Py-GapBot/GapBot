@@ -30,7 +30,8 @@ class Gap(Methods, BaseClient):
                  host: str = '0.0.0.0',
                  callback: str = '/webhook',
                  port: int = 5000,
-                 bot_token: str = None
+                 bot_token: str = None,
+                 debug=False
                  ):
         super().__init__()
         self.host = host
@@ -38,6 +39,7 @@ class Gap(Methods, BaseClient):
         self.callback = callback
         self.bot_token = bot_token
         self.handler = None
+        self.debug = debug
 
     def run(self):
         @self.flask_app.route('/info', methods=['POST', 'GET', 'PUT'])
@@ -67,7 +69,7 @@ class Gap(Methods, BaseClient):
                     json_update['data'] = update.get('data')
             self.handler(self, json_update)
             return json_dumps(json_update)
-        self.flask_app.run(host=self.host, port=self.port, debug=False)
+        self.flask_app.run(host=self.host, port=self.port, debug=self.debug)
 
     def _send(self, method, data, files=None):
         headers = {
