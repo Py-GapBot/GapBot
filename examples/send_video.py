@@ -12,7 +12,8 @@ if __name__ == '__main__':  # If you are running this module as the main program
         video_path = r'/home/GapUser/Gap.mp4'
     app.send_video(
         chat_id=target_id,
-        path=video_path
+        path=video_path,
+        caption='Gap Caption'
     )
 
 # https://developer.gap.im/doc/botplatform#method-send-video

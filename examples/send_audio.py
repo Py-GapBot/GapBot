@@ -12,7 +12,8 @@ if __name__ == '__main__':  # If you are running this module as the main program
         audio_path = r'/home/GapUser/Gap.mp3'
     app.send_audio(
         chat_id=target_id,
-        path=audio_path
+        path=audio_path,
+        caption='Gap Caption'
     )
 
 # https://developer.gap.im/doc/botplatform#method-send-audio

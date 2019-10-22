@@ -12,7 +12,8 @@ if __name__ == '__main__':  # If you are running this module as the main program
         file_path = r'/home/GapUser/Gap.txt'
     app.send_file(
         chat_id=target_id,
-        path=file_path
+        path=file_path,
+        caption='Gap Caption'
     )
 
 # https://developer.gap.im/doc/botplatform#method-send-file

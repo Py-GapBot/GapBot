@@ -12,7 +12,8 @@ if __name__ == '__main__':  # If you are running this module as the main program
         voice_path = r'/home/GapUser/Gap.ogg'
     app.send_video(
         chat_id=target_id,
-        path=voice_path
+        path=voice_path,
+        caption='Gap Caption'
     )
 
 # https://developer.gap.im/doc/botplatform#method-send-voice

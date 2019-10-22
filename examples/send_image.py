@@ -12,7 +12,8 @@ if __name__ == '__main__':  # If you are running this module as the main program
         image_path = r'/home/GapUser/Gap.png'
     app.send_image(
         chat_id=target_id,
-        path=image_path
+        path=image_path,
+        caption='Gap Caption'
     )
 
 # https://developer.gap.im/doc/botplatform#method-send-image

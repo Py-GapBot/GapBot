@@ -9,7 +9,8 @@ if __name__ == '__main__':  # If you are running this module as the main program
     app.send_contact(
         chat_id=target_id,
         name='Gap',
-        phone='+989123456789'
+        phone='+989123456789',
+        caption='Gap Caption'
     )
 
 # https://developer.gap.im/doc/botplatform#method-send-contact
