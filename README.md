@@ -5,6 +5,10 @@
     <br>
     <b>Gap Messenger Api Bot Library for Python</b>
     <br>
+    <a href="https://pypi.org/project/GapBot/">
+        Pypi
+    </a>
+    •
     <a href="https://gapbot.readthedocs.io/en/latest/">
         Documentation(coming soon)
     </a>
