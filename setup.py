@@ -8,7 +8,7 @@ URL = 'https://github.com/MrMahdi313/gapbot'
 EMAIL = 'm.m.z.m12363@gmail.com'
 AUTHOR = 'MrMahdi313'
 REQUIRES_PYTHON = '>=3.6.0'
-VERSION = '0.0.4'
+VERSION = '0.1.0'
 LICENSE = 'GNU Lesser General Public License v3.0'
 try:
     with open(path.join(here, "requirements.txt"), encoding="utf-8") as r:
