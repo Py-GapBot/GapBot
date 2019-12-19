@@ -1,8 +1,8 @@
 from .gap import Gap
 from gapbot.ext import BaseClient
 from .methods import *
-from .types import Types
+from . import types
 
 __all__ = [
-    'Gap', 'BaseClient', 'Methods', 'Types'
+    'Gap', 'BaseClient', 'Methods', 'types'
 ]
