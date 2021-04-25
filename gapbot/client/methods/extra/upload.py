@@ -11,7 +11,7 @@ class Upload(BaseClient):
             send_result = self._send(
                 method='upload',
                 data={'chat_id': chat_id, 'desc': desc},
-                files={file_type: (file_name or 'file', file.read())}
+                files={file_type: (file_name or os.path.basename(file.name), file.read())}
             ).json()
             send_result['desc'] = desc
             return json_dumps(send_result)
