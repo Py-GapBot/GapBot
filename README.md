@@ -59,7 +59,7 @@ pip3 install GapBot
 
 - The Docs contain lots of resources to help you getting started with GapBot:
  https://gapbot.readthedocs.io/en/latest (coming soon).
-- Reading [Examples in this repository](https://github.com/MrMahdi313/GapBot/tree/master/examples) is also a good way
+- Reading [Examples in this repository](https://github.com/Py-GapBot/GapBot/tree/master/examples) is also a good way
   for learning how GapBot works.
 - For other requests you can send an [Email](mailto:m.m.z.m12363@gmail.com) or a [Message](https://t.me/Mr_Mahdi313).
 
@@ -71,5 +71,5 @@ and documentation. Any help is appreciated!
 
 ### Copyright & License
 
-- Copyright (C) 2017-2019 MohammadMahdi Zojaji as <<https://github.com/MrMahdi313>>
+- Copyright (C) 2017-2019 MohammadMahdi Zojaji as <<https://github.com/mahdizojaji>>
 - Licensed under the terms of the GNU Lesser General Public License v3 or later (LGPLv3+)
